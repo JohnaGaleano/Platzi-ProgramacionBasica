@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Tu peso en</title>
+</head>
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>Sera divertido</p>
+    <h3>Selecciona un planeta</h3>
+    <select id="mySelect">
+        <option>Marte</option>
+        <option>Jupiter</option>
+      </select>
+    <button type="button" onclick="myFunction()">Calcular tu peso en el planeta que escogiste</button>
+    
+    <script>
+
+    let peso = parseInt(prompt ("ingresa tu peso"));    
+    let g_tierra = 9.8;
+    let g_jupiter = 24.8;
+    let g_marte = 3.7;
+    let pesoEn;
+    let planet;
+
+
+    function myFunction()
+    {
+        let x = document.getElementById("mySelect").selectedIndex;
+        let y = document.getElementById("mySelect").options;
+
+        planet= y[x].index;
+
+        if( planet == 0)
+        {
+            pesoEn = parseInt((peso*g_marte)/g_tierra);
+        }
+        else if(planet == 1)
+        {
+            pesoEn = parseInt((peso*g_jupiter)/g_tierra);
+        }
+
+        document.write("Tu peso en " + y[x].text + " es " + pesoEn + " kilos");    
+    }    
+  
+    </script>
+</body>
+</html>

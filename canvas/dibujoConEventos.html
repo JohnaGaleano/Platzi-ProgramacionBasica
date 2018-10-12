@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <metacharset="utf-8">
+    <title>ciclos</title>
+  </head>
+  <body>
+    <h1>Dibujando lineas</h1>
+
+    <p>
+      <labelfor="n-lineas"><b>¿Cuantas lineas quieres?</b></label>
+      <inputtype="text"placeholder="# de lineas"maxlength="3"id="n-lineas">
+    </p>
+
+    <p>
+      <labelfor="color"><b>Escoge un color </b></label>
+      <inputtype="color"id="color"><br>
+    </p>
+
+    <p>
+      <b>Escoge en que parte lo quieres:</b>
+      <selectid="lado">
+        <optionvalue="superior_izquierdo">superior izquierdo</option>
+        <optionvalue="superior_derecho">superior derecho</option>
+        <optionvalue="inferior_izquierdo">inferior izquierdo</option>
+        <optionvalue="inferior_derecho">inferior derecho</option>
+        <optionvalue="todo">todo</option>
+      </select>
+    </p>
+
+    <p>
+      <labelfor="t-canvas"><b>¿De que tamaño lo quieres?</b></label>
+      <inputtype="text"placeholder="ejemplo:''300''"maxlength="4"id="t-canvas">
+    </p>
+
+    <p>
+      <inputtype="button"id="boton"value="a dibujar!!"><br>
+    </p>
+
+    <canvasid="dibujo1"></canvas>
+    <hr>
+    <script src="dibujo.js"></script>
+
+  </body>
+</html>
